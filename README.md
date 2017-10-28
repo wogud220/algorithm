@@ -25,3 +25,16 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 # Session 2. 10.27.17'
 	
 	TODO: update me.
+
+# Session 3. TBD.
+## Problem 1)
+Given a N x M grid of numbers all positive and <= 10000, you want to reach from the top left corner to the bottom right corner in the minimum number of steps. You can move from cell (i, j) to its adjacent neighbors if and only if the value of an adjacent cell is lower than that of cell (i, j).
+
+## Problem 2)
+Same problem except that you are interested in finding the number of all such paths (not necessarily minimum).
+
+## Problem 3)
+The computer memory can be conceptually thought of as an array A of N numbers. A memory cell A[i] has two values associated with it. m_i is how many bytes it represents and c_i is the cost of "free"-ing that memory cell. You want to run your favorite new game and need at least M bytes. Figure out the minimum cost sum of clearing memory cells such that you have M free bytes.
+
+## Problem 4)
+In an undirected tree (a graph that has no cycle and is connected), the diameter of a tree is defined to be the longest path between any two nodes in a tree. Give a recurrence relation that computes the diameter of a tree.
