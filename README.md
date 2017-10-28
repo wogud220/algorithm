@@ -25,19 +25,55 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 # Session 2. 10.27.17'
 	
 ## Problem 1)
-	Given a p-string of "(" and ")", check if the p-string is valid. A valid p-string is either 1) empty string, 2) "(" + p-string + ")", or 3) p-string + p-string.
+	Given a string S consisting of "(" and ")", check if the string is valid. A valid p-string is either 1) empty string, 2) "(" + p-string + ")", or 3) p-string + p-string.
 
-	This problem can be solved using some sort of stack method, but a DP approach is more applicable to the various variations of this problem.
-	Define DP[i][j] as 
+	This problem can be solved using some sort of stack approach, but a DP approach is more applicable to the various variations of this problem.
+	Define DP[i][j] as True if S[i:j] is a valid p-string, False otherwise. The final answer is DP[0][n-1].
+	Recurrence:
+	DP[i][j] = (if S[i]+S[j] = "()", DP[i+1][j-1]) or
+		(DP[i][k] and DP[k+1][j] for all k = i+1, increment by 2, k<j)
+	This directly follows from the recursive definition of p-strings. Either the string is enclosed by ( and ) and the inside is valid, or it is some combination of two possible p-strings. k increments by 2 because it is impossible for an odd-length p-string to be valid.
+	The runtime of this algorithm is O(n^3) since for all n^2 entries, there are possibly up to O(n) operations.
 
 ## Problem 2)
-	Given a p-string, find the longest valid subsequence
+	Given a p-string, find the longest valid subsequence.
+	
+	The solution to this problem is almost the same as problem 1.
+	Define DP[i][j] as the length of the longest valid subsequence contained in S[i:j]. The final answer is DP[0][n-1].
+	Recurrence:
+	INC = 2 if S[i]+S[j] = "()", 0 otherwise.
+	DP[i][j] = max(DP[i+1][j-1] + INC,
+		(DP[i][k] + DP[k+1][j] for all k = i+1, increment by 2, k<j)).
+	In a similar reasoning as problem 1, we simply go over every case of splitting the entry into smaller parts, and finding the one that gives the maximum valid subsequence.
+	The runtime of this algorithm is O(n^3) since for all n^2 entries, there are possibly up to O(n) operations.
 
 ## Problem 3)
-	Given a p-string, find the longest valid substring and its occurences.
+	Given a p-string, find the longest valid substring ***and its occurences***.
+	
+	Define DP[i] as the length of the longest valid substring starting with S[i]. The final answer is max(DP[i]).
+	Recurrence:
+	DP[i] = if S[i] = ")"
+			0
+		if S[i] = "(" and S[i+1] = ")"
+			2 + DP[i+2]
+		if S[i] = "(" and S[i+1] = "("
+			if S[i + DP[i+1] + 1] = ")"
+				2 + DP[i+1]
+			else
+				0
+	Since DP[i] is defined to be starting at S[i], we simply need to go through every case. If S[i] is ")", then LVS is already invalid, thus the length is 0. If S[i] is "(" and S[i+1] is ")" then we can look at DP[i+2] and add two to that result. If S[i] and S[i+1] = "(", then two ")" must show up later. We find the longest occurence of this by looking at DP[i+1]. DP[i+1] tells us where the first ")" occurs, since DP[i+1] contains the length of the LVS. By summing i, this length, and 1, we are now at the index of S where the second ")" should occur, and we simply add 2 to DP[i+1]. If it does not occur, then there is no valid substring starting at S[i], thus the length is 0.
 	
 ## Problem 4)
-	Now, include [] and {} with the same constraints. Given a string containing of (){}[] and ?, find the number of possible ways to replace the ? with one of ()[]{}. Ex) ([?) = 1, ???] = 3.
+	Now, include [] and {} with the same constraints. Given a string containing of (){}[] and ?, find the total number of possible ways to replace the ? with one of ()[]{}. Ex) ([?) = 1, ???] = 3.
+	
+	The solution to this problem is almost the same as problem 1.
+	Define DP[i][j] as the total number of ways to replace ? with ()[]{} in S[i:j]. The final answer is DP[0][n-1].
+	Recurrence:
+	INC = 3 if S[i]+S[j] = "??", 1 if S[i]+S[j] = "()", "?)", "(?". (check also for {,},[,], in similar fashion), 0 otherwise.
+	DP[i][j] = max((DP[i+1][j-1] * INC),
+		(DP[i][k] * DP[k+1][j] for all k = i+1, increment by 2, k<j)).
+	In a similar reasoning as problem 1, we simply go over every case of splitting the entry into smaller parts, and finding the one that gives the maximum number of ways to replace ?. We multiply instead of adding like in problem 2 because we are multiplying the occurences of independent events.
+	The runtime of this algorithm is O(n^3) since for all n^2 entries, there are possibly up to O(n) operations.
 
 # Session 3. TBD.
 ## Problem 1)
