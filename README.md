@@ -13,6 +13,7 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 		 					   Case 2) not include r_i into the sum.
 		 Define dp[i] as the maximum sum generated from beginning to xi coordinate of either including or not                          including the r_i value.
 		 	dp[i] = max( dp[k] + r_i (case1) , dp[i-1] (case2))
+			base case: dp[0] = r_0
 			In case1, because the constraint is the distance 5, we will have to iterate all the x positions before 			       i to find the latest position before i that satisfies greater than 5 condition, and we would choose 			   that position as the k value. Due to iteration we make to find the position that satisfies x_(i+1) -   			  x_i >= 5 for each x, time complexity becomes O(n^2).
 		
 
@@ -35,10 +36,13 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 
 ## Problem 2)
 	Same problem as Problem 1 with the added constraint that the subset has to be exactly of some given size K.
+	
+	
 
 ## Problem 3)
 	Same problem as problem 2 except that the the subset can be of size upto some given size K.	
-
+	
+	Similar appoach to number 2, but instead of just setting the base case as dp[0][0] = 0, we nee to initialize dp[0][0~k]= 0.
 # Session 2. 10.27.17'
 	
 ## Problem 1)
