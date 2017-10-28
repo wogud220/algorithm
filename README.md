@@ -24,7 +24,20 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 
 # Session 2. 10.27.17'
 	
-	TODO: update me.
+## Problem 1)
+	Given a p-string of "(" and ")", check if the p-string is valid. A valid p-string is either 1) empty string, 2) "(" + p-string + ")", or 3) p-string + p-string.
+
+	This problem can be solved using some sort of stack method, but a DP approach is more applicable to the various variations of this problem.
+	Define DP[i][j] as 
+
+## Problem 2)
+	Given a p-string, find the longest valid subsequence
+
+## Problem 3)
+	Given a p-string, find the longest valid substring and its occurences.
+	
+## Problem 4)
+	Now, include [] and {} with the same constraints. Given a string containing of (){}[] and ?, find the number of possible ways to replace the ? with one of ()[]{}. Ex) ([?) = 1, ???] = 3.
 
 # Session 3. TBD.
 ## Problem 1)
