@@ -7,14 +7,31 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 ## Problem 1)
 	Given a set of x coordinates x1, x2, ..., xn and some rewards associated with each coordinate r1, r2, ..., rn, find the subset of x coordinates such that x_(i+1) - x_i >= 5 and the sum of corresponding r_i for each element in the subset is maximized.
 
-	Approach 1)
-		TODO: fill this out
+	Approach 1) O(n^2) approach
+		 
+		 At each i positions, we have two choices. Case 1) inlcude r_i into the sum. 
+		 					   Case 2) not include r_i into the sum.
+		 Define dp[i] as the maximum sum generated from beginning to xi coordinate of either including or not                          including the r_i value.
+		 	dp[i] = max( dp[k] + r_i (case1) , dp[i-1] (case2))
+			In case1, because the constraint is the distance 5, we will have to iterate all the x positions before 			       i to find the latest position before i that satisfies greater than 5 condition, and we would choose 			   that position as the k value. Due to iteration we make to find the position that satisfies x_(i+1) -   			  x_i >= 5 for each x, time complexity becomes O(n^2).
+		
 
-	Approach 2)
-		TODO: fill this out
+	Approach 2) O(N) approach
+		Similar to above, but we can figure out the lastest position which satisfies x_(i+1) - x_i >= 5 for each x 
+		before we start. We can implement this by using two pointer. One pointer starting from x_0, and other one x_1.
+		When this is done, in contrast to our first approach, we do not have to loop through the list each time, but 		     just use the information that we found before hand, and in a constant time can find the index of postion 		        that satisfies x_(i+1) - x_i >= 5. Because this means that we only need to go through the x coordinates once,                 the runtime is O(N).
 	
-	Approach 3)
-		TODO: fill this out
+	Approach 3) O(M)
+		dp[i] is the maximum sum generated from beginning to i where 1<= i <= M, M = max distance.
+		This method, instead of looking at each x position, we are looking at i miles on the highway. 
+		Two cases:
+			1. Not a valid spot for any billboards
+			2. Valid spot for a billboard.
+			      - Valid, but do not include this spot to the sum
+			      - Valid, do include this spot to the sum
+		Case 1, dp[i] is always dp[i-1], because we are for sure not including any new element.
+		Case 2, dp[i] is max(dp[i-1], dp[i-5-1] + r_i), we compare the values sum of not including the spot, and 			including the spot.
+		To apply this method, we have to make sure that x_1 < x_2 < ....<x_n-1 < x_n, specifying that the measure is 			in order.
 
 ## Problem 2)
 	Same problem as Problem 1 with the added constraint that the subset has to be exactly of some given size K.
