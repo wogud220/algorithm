@@ -37,12 +37,18 @@ This repoistory serves as a place for consolidating 1) problems we went over in 
 ## Problem 2)
 	Same problem as Problem 1 with the added constraint that the subset has to be exactly of some given size K.
 	
+	dp[i][k] represents the maximum sum generated from beginning to x_i using k elements. x_i can be included or not 	 included. 
+	Two cases: 1. Include x_i to the sum
+	           2. Not include x_i to the sum
+	dp[i] = max( dp[i-1][k], dp[e*][k-1] + arr[i]).  dp[i-1][k] is not using the x_i, and dp[e*][k-1] + arr[i] is using 	    the x_i element. Here e* represents the latest x position that satisfies x_(i) - x_e* >= 5 where e* < i. 
+	The solution will be dp[len(arr)][k].
+	
 	
 
 ## Problem 3)
 	Same problem as problem 2 except that the the subset can be of size upto some given size K.	
 	
-	Similar appoach to number 2, but instead of just setting the base case as dp[0][0] = 0, we nee to initialize dp[0][0~k]= 0.
+	Similar appoach to number 2, but instead of just setting the base case as dp[0][0] = 0, we nee to initialize dp[0]	  [0~k]= 0.
 # Session 2. 10.27.17'
 	
 ## Problem 1)
