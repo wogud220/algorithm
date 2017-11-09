@@ -114,3 +114,29 @@ The computer memory can be conceptually thought of as an array A of N numbers. A
 
 ## Problem 4)
 In an undirected tree (a graph that has no cycle and is connected), the diameter of a tree is defined to be the longest path between any two nodes in a tree. Give a recurrence relation that computes the diameter of a tree.
+
+
+# (Informal) Session 4. 11.08.17'
+## Problem 1)
+Given a graph with no negative sum cycles, find the second shortest path.
+
+
+## Problem 2)
+Given a graph where each node has at most K edges, give an algorithm to color this graph with K + 1 colors s.t. no two adjacent nodes have the same colors.
+
+## Problem 3)
+Given a subset A of intervals and some interval B, find the subset S of A that contains the minimum number of intervals such that the union of intervals in S contains B.
+
+## Problem 4)
+Given N people and a_i intervals for each person i where each interval is represented by [s, e] (s, e = some real numbers in [0, 24)) and means the time slot person i cannot have a meeting, find the set of all intervals where a meeting with everyone is possible.
+
+## Problem 5)
+Given a fair coin, simulate a fair 6 sided dice.
+
+## Problem 6)
+Given a function to sample a point from [0, 1] uniformly at random, simulate the sampling of a point from a unit circle uniformly at random.
+
+
+
+
+
