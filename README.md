@@ -136,6 +136,8 @@ Given a fair coin, simulate a fair 6 sided dice.
 ## Problem 6)
 Given a function to sample a point from [0, 1] uniformly at random, simulate the sampling of a point from a unit circle uniformly at random.
 
+## Problem 7)
+Find the second minimum spanning tree. Argue if you can use the same method to find the 3rd minimum spanning tree.
 
 
 
