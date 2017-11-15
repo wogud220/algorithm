@@ -140,5 +140,12 @@ Given a function that can sample a point from [0, 1] uniformly at random, simula
 Find the second minimum spanning tree. Argue if you can use the same method to find the 3rd minimum spanning tree.
 
 
+# (Informal) Session 5. 11.14.17'
+## Problem 1)
+Given a directed graph with N nodes and E edges where there is no negative sum cycle, you want to find the shortest path from node S to node T. To make the problem interesting, consider a set of one way flights F that connect you from node s_i to node e_i for each flight i and you can ride at most one flight. Find the shortest path from node S to node T that may include at most one such flight. Note that the number of N, E <= 10^6. You want to design an algorithm that runs under 1s and a modern machine can process about O(10^8) operations in 1s.
 
+## Problem 2)
+Given a directed graph with N nodes and E edges, you have a robot that starts at some node S. The robot has one pre-programed rule, which dictates it to always take a certain directed edge e_i (other than some other directed edges) when it is at some node n_i. Additionally, some nodes count for destinations where the robot may stop. This robot unfortunately is buggy and can make upto 1 mistake of violating the rule. Find the number of distinct destinations the robot may end up at.
 
+## Problem 3)
+Read first https://docs.google.com/a/rice.edu/document/d/1VFKJwOLE52h-JtyCZ-PySMymGe_5mxX2nGBM0nFsgKE/edit?usp=sharing and design a binary search algorithm that takes as input an sorted array A and x and outputs the smallest idx s.t. A[idx] <= x. Notice that this is different from the standard definition of binary search which finds the smallest idx s.t. A[idx] >= x. Argue why your algorithm is correct.
