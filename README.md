@@ -150,3 +150,20 @@ Given a directed graph with N nodes and E edges, you have a robot that starts at
 ## Problem 3)
 Read first https://docs.google.com/a/rice.edu/document/d/1VFKJwOLE52h-JtyCZ-PySMymGe_5mxX2nGBM0nFsgKE/edit?usp=sharing. Note that the standard binary search definition is "given sorted/zero-indexed array A and some number x, find the idx s.t. A[idx-1] < x <= A[idx]. Assume A[-1]= -inf. A[n] = +inf. for clean notation.". Suppose the modified binary serach definition "given sorted/zero-indexed array A and some number x, find the idx s.t. A[idx] <= x < A[idx+1]. Assume for simplicity A[-1] = -inf and A[n] = +inf.". Give the algorithm and/or the set of loop invariants. Argue why your algorithm / set of loop invariants are correct. Refer to https://www.evernote.com/shard/s726/sh/bc3c9ae3-55d3-4775-bb2b-a00307ff9742/b2a9f6e26d2259bed0227e7348c8504b for example.
 Note that the two definitions given are the standard Python's bisect.bisect_left and bisect.bisect_right definitions. (with a slight difference)
+
+# Session 6. 
+## Problem 0)
+http://codeforces.com/problemset/problem/645/C (the cow problem)
+
+## Problem 1)
+You are the managing director of an autonomous car driving competition and want to set up N cameras to monitor the competition.
+There are M possible locations (real numbers along the x axis) to set up cameras. You want to set up the cameras such that the distance between
+two closest cameras is maximized. Find this distance in an optimal configuration. 
+
+## Problem 2)
+http://codeforces.com/problemset/problem/372/A
+
+## Probelm 3)
+TBD
+
+
