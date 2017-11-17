@@ -164,6 +164,5 @@ two closest cameras is maximized. Find this distance in an optimal configuration
 http://codeforces.com/problemset/problem/372/A
 
 ## Probelm 3)
-TBD
-
-
+https://www.acmicpc.net/problem/3651. Given m, find all the (n, k) pairs s.t. n C k = m. m can be upto 10^15. 
+Think of what monotonic nature this problem has
