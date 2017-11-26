@@ -17,3 +17,11 @@ a. Define the point in the sequence we want to find (when the predicates turn fr
 b. Define loop invariants - answer range, parameter constraints.
 c. In the loop, make sure not to break invariants. Also make sure that progress is being made on each loop (will terminate)
 d. There should be a clear answer to return once the parameter constraints are no longer met.
+
+## Auxilliary Problem Notes
+Given your position in a line, determine which server will serve you
+
+Monotonic Nature: Given time T, will I have been served?
+-> Will look like NNNNNYYYYY
+-> Use BinSearch to find first point at which answer is Y
+-> Use modulo to easily find server
