@@ -197,6 +197,8 @@ INPUT2)
 OUTPUT2)
 2
 
+HINT) try solving this in both O(N) and O(N log N). which algorithms do you think are required to solve this problem in each time complexity?
+
 ## Problem 1)
 When is a graph a tree? if yes, prove it. if not, give a counter example.
 
@@ -226,6 +228,8 @@ OUTPUT)
 140
 1 3 5 7
 
+HINT) DP is not only done when you have a tabular relationship. In general, DP can be done if and only if you have a directed acyclic relationship. For example, a tree is a directed acyclic graph.
+
 ## Problem 3)
 https://code.google.com/codejam/contest/8284487/dashboard
 A. Go Sightseeing. Note that this problem has its analysis available. Try not to look at it before you solve it. Try to give two different DP recurrent relations where the meaning of each relation is defined as follows.
@@ -233,3 +237,5 @@ A. Go Sightseeing. Note that this problem has its analysis available. Try not to
 M[i, j] = the maximum number of cities that you can go sightseeing in if you have reached citi i by time j.
 
 F[i, j] = the earlist time you can reach citi i after having gone sightseeing at exactly j different cities.
+
+HINT) Given the semantics of your dp definition, fill the rest!
