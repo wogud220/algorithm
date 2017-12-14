@@ -176,7 +176,7 @@ You have N empty boxes. For every i (1<= i <= n), i-th box is a cube with side l
 2) box j doesn't contain any other box.
 3) box i is smaller than box j (i.e. a_i < a_j)
 
-Your task is to find the minimum number of visible boxes. A box is visible if and only if it is not put inside some other box.
+Your task is to find the minimum number of visible boxes by putting some boxes inside others.. A box is visible if and only if it is not put inside some other box.
 
 input sizes.
 N <= 5000.
@@ -206,7 +206,7 @@ OUTPUT2)
 HINT) try solving this in both O(N) and O(N log N). which algorithms do you think are required to solve this problem in each time complexity?
 
 ## Problem 1)
-When is a graph a tree? if yes, prove it. if not, give a counter example.
+When is a graph a tree? For each of the following conditions, write either yes or no. If yes, prove it. If no, give a counter example.
 
 1) It has no cycles and has N nodes and N - 1 edges.
 2) It has N nodes and N - 1 edges and all the nodes are connected. i.e. you can get from node i to node j for any pair (i, j)
