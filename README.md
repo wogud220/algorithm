@@ -262,5 +262,39 @@ D(x, y) = { |x - y | if | x - y | > 1 else 0 }
 
 Given an array A consisting of N integers, calculate sum of D(a_i, a_j) for all i, j s.t. 1 <= i <= j <= n in O(N log N)
 
-HINT) binary search.
+e.g.
+
+INPUT1)
+
+5
+
+1 2 3 1 3
+
+OUTPUT1)
+
+8
+
+INPUT2)
+
+4
+
+6 6 5 5
+
+OUTPUT2)
+
+0
+
+INPUT3)
+
+4
+
+6 6 4 4
+
+OUTPUT)
+
+8
+
+HINT) sort and binary search.
+
+
 
