@@ -166,3 +166,70 @@ http://codeforces.com/problemset/problem/372/A
 ## Probelm 3)
 https://www.acmicpc.net/problem/3651. Given m, find all the (n, k) pairs s.t. n C k = m. m can be upto 10^15. 
 Think of what monotonic nature this problem has
+
+# Seesion 7. (Last problem set for 2017)
+Use this problem set to gauge your knowledge in greedy algorithms and dynamic programming.
+
+## Problem 0)
+You have N empty boxes. For every i (1<= i <= n), i-th box is a cube with side length a_i. You can put box i into another box j if and only if
+1) box i is not put into another box already.
+2) box j doesn't contain any other box.
+3) box i is smaller than box j (i.e. a_i < a_j)
+
+Your task is to find the minimum number of visible boxes. A box is visible if and only if it is not put inside some other box.
+
+input sizes.
+N <= 5000.
+1<= a_i <= 10^9.
+
+e.g.
+INPUT1)
+3
+1 2 3
+
+OUTPUT1)
+1
+
+INPUT2)
+4
+4 2 4 3
+
+OUTPUT2)
+2
+
+## Problem 1)
+When is a graph a tree? if yes, prove it. if not, give a counter example.
+
+1) It has no cycles and has N nodes and N - 1 edges.
+2) It has N nodes and N - 1 edges and all the nodes are connected. i.e. you can get from node i to node j for any pair (i, j)
+3) It has no cycles and it is connected.
+
+## Problem 2)
+Given a tree, the maximum indepdent set of a tree is defined to be a set of nodes such that no pair of nodes in the set is adjacent and the sum of node values is maximized. Note that if there is no node value, the maximum indepdent set is defined to be such a set with the maximum set size. 
+Input is given as follows
+1) 1st line : N, number of nodes in the tree
+2) N node values : nv1, nv2, ...., nv_n.
+3) N - 1 lines follow where each line represents an edge (i, j).
+
+e.g.
+INPUT)
+7
+10 30 40 10 20 20 70
+1 2
+2 3
+4 3
+4 5
+6 2
+6 7
+
+OUTPUT)
+140
+1 3 5 7
+
+## Problem 3)
+https://code.google.com/codejam/contest/8284487/dashboard
+A. Go Sightseeing. Note that this problem has its analysis available. Try not to look at it before you solve it. Try to give two different DP recurrent relations where the meaning of each relation is defined as follows.
+
+M[i, j] = the maximum number of cities that you can go sightseeing in if you have reached citi i by time j.
+
+F[i, j] = the earlist time you can reach citi i after having gone sightseeing at exactly j different cities.
