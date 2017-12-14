@@ -254,4 +254,4 @@ M[i, j] = the maximum number of cities that you can go sightseeing in if you hav
 
 F[i, j] = the earlist time you can reach citi i after having gone sightseeing at exactly j different cities.
 
-HINT) Given the semantics of your dp definition, fill the rest!
+HINT) Let the semantics of your dp definition guide you!
