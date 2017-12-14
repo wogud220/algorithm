@@ -184,17 +184,23 @@ N <= 5000.
 
 e.g.
 INPUT1)
+
 3
+
 1 2 3
 
 OUTPUT1)
+
 1
 
 INPUT2)
+
 4
+
 4 2 4 3
 
 OUTPUT2)
+
 2
 
 HINT) try solving this in both O(N) and O(N log N). which algorithms do you think are required to solve this problem in each time complexity?
@@ -215,17 +221,26 @@ Input is given as follows
 
 e.g.
 INPUT)
+
 7
+
 10 30 40 10 20 20 70
+
 1 2
+
 2 3
+
 4 3
+
 4 5
+
 6 2
+
 6 7
 
 OUTPUT)
 140
+
 1 3 5 7
 
 HINT) DP is not only done when you have a tabular relationship. In general, DP can be done if and only if you have a directed acyclic relationship. For example, a tree is a directed acyclic graph.
