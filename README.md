@@ -203,7 +203,6 @@ OUTPUT2)
 
 2
 
-HINT) try solving this in both O(N) and O(N log N). which algorithms do you think are required to solve this problem in each time complexity?
 
 ## Problem 1)
 When is a graph a tree? For each of the following conditions, write either yes or no. If yes, prove it. If no, give a counter example.
@@ -255,3 +254,13 @@ M[i, j] = the maximum number of cities that you can go sightseeing in if you hav
 F[i, j] = the earlist time you can reach citi i after having gone sightseeing at exactly j different cities.
 
 HINT) Let the semantics of your dp definition guide you!
+
+## Problem 4)
+denote 
+
+D(x, y) = { |x - y | if | x - y | > 1 else 0 }
+
+Given an array A consisting of N integers, calculate sum of D(a_i, a_j) for all i, j s.t. 1 <= i <= j <= n in O(N log N)
+
+HINT) binary search.
+
