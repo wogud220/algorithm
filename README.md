@@ -295,6 +295,4 @@ OUTPUT)
 8
 
 HINT) sort and binary search.
-
-
-
+CHALLENGE) what if D(x, y) = { y - x if | x - y | > 1 else 0} ? what if D(x, y) = y - x simply?
