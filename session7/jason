@@ -1,1 +1,40 @@
+IN PROGRESS
+
+Problem 0
+Sort
+Binsearch for predicate: Can you make at most X boxes be visible?
+NNNYYY
+
+Problem 1
+Definition of tree: A graph of nodes and edges without a cycle.
+1. Yes.
+P(N) = An acyclic graph with N nodes and N-1 edges is a tree.
+P(1) = An acyclic graph with 1 node and 0 edges is obviously a tree.
+I.H. - P(k) = An acyclic graph with k nodes and k-1 edges is a tree.
+P(k+1) = An acyclic graph with k+1 nodes and k edges is a tree.
+This is true because any acyclic graph with k+1 nodes and k edges can be formed from an acyclic graph with k nodes and k-1 edges. We know that this graph is a tree. Adding a node and adding an edge that would not form a cycle results in another tree.
+
+2. Yes
+Assume that the graph contains a cycle.
+Some subgraph of k nodes and at least k edges between the k nodes exist, where k >= 1.
+Then, there remains N-k nodes and N-k-1 edges.
+Take the following cases:
+i) k < N-1
+There must be at least 1 edge from 1 node in the cycle to a node not in the cycle, since the nodes are connected. Then, There now remains N-k-1 unconnected nodes and N-k-2 edges. Repeating the process, we find that it is impossible to connect every node of the graph, since there will be a missing edge at the end. Therefore, this is a contradiction.
+ii) k = N-1
+There remains 1 unconnected node and no remaining edges. This is a contradiction from the assumption.
+Then, this is now an acyclic graph with N nodes and N-1 edges, from part 1) we know this is a tree.
+
+3. Yes
+This graph with N nodes must have N-1 edges, since there needs to be at least N-1 edges in order for every node to be connected.
+However, adding another edge creates a cycle somewhere in the graph.
+Thus, from part 1), this is a tree.
+
+Problem 2
+
+Problem 3
+at first glance, DP from city N?
+
+Problem 4
+
 
