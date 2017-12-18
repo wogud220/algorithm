@@ -1,0 +1,86 @@
+Session 7
+
+Problem 0) . : Greedy
+Solution 1: O(NlogN)
+Sort the n empty boxes. Then Greedly take the largest box. Take the next largest box into the previous box. If the value is
+
+Solution 2: O(N)
+Check how many same number of boxes exists using dictionary. 
+The max number boxes of same size is minimum number of visible boxes.
+The only time When we would require a new visible box is when we have multiple box of same size. Otherwise we would 
+always be able to put a smaller box into a larger one.
+
+
+Problem 1)
+Definition of a tree : Acyclic Connected graph.
+
+Assuming the Graph can be directed
+1) No 
+Counter example : Assuming the graph is disconnected and directed. Given 4 node with 3 edge where edges are connected
+from node 1 to node 2 and 3, and node 2 to node 3. Then we don't have a cycle and there are N nodes and N-1 edges, but
+this is not a tree because the graph is not connected
+
+2) Yes
+Proof by Contradiciton : If we have a connected graph with N nodes and N-1 edges, we can only have a acyclic connected graph, meaning there can
+be no cycle. First if we have a cycle, that means we have subset of graph that has k nodes and at least k edges. 
+Then we are left with N-k nodes and N-k-1 nodes. Since the graph is connected there must be an edge connected to this cycle
+and N-k nodes need to be connected. Connecting N-k nodes require at least N-k-1 edges. So If there are cycle the graph can't be
+connected. So the graph is acyclic connected graph which is the definition of tree. 
+
+3)Yes
+This is the definition of tree. 
+
+Assuming that Graph are undirected
+1) Yes
+Because the Undirected acyclic graph with N node and N-1 edges are connected graph.
+2) Yes
+Same logic as undirected graph above apply to directed graph
+3) Yes
+Same logic as undirected graph above apply to directed graph
+
+
+Problem 2)
+Note :
+NP-complete problem if it was not a tree.
+Tabular relation = connection between two tables of data
+
+Solution : DP
+Set any node as root.
+DP[x] definition : maximum independent set of a subset of given tree where subset is a child tree that start at x.
+
+Base Case : 
+If x is leaf node , DP[x] = a_x  
+
+Recurrence equation : 
+DP[x] = Max(Sum of DP[child nodes of x],Sum of DP[child nodes of the child nodes of x] + a_x)
+
+
+Problem 3) : need some fix (currently not counting last city sighting)
+
+Recurrence equation : M[i,j]
+y = floor((j-D_(i-1))/F_(i-1))*F_(i-1) - S_i   = latest time that one can travel from i-1 to i before j.
+M[i,j] = Max( M[i-1, y], M[i-1, y - T_s] + 1)
+Take the max of not sightseeing from i-1 city on the lastest time that one can from i-1 to i before j,
+or sightseeing from i-1 city on the latest time that one can travel from i-1 to i before j,
+
+Base case :
+If i is first city and j = 0,  M[i,j] = 0
+
+
+Recurrence equation : F[i,j]
+F[i,j] = Min(F[i-1,j-1]+ T_s + Buswait-time + D_(i-1), F[i-1,j]+ Buswait-time + D_(i-1))
+Take the minimum of sightseeing from a i-1 city with already sightseen j-1 city  
+or not sightseeing from i-1 city with already sightseen j city.
+
+Base case :
+If i is first city and j = 0, F[i,j] = 0
+If j ≥ i then F[i,j] = inf
+
+
+Problem 4)
+Still solving
+
+
+
+
+
