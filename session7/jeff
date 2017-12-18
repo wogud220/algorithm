@@ -1,9 +1,9 @@
 0. 
   nlogn
   - Sort the boxes from smallest to biggest.
-  - starting from the smallest box i, put i into next possible box.
+  - starting from the smallest box i, find max of consecutive equal size box.
   n
-  - go through the array find max number of equal size box.
+  - go through the array and use dictionary to count number of boxes in each size and return max.
   
 1. 
 -It has no cycles and has N nodes and N - 1 edges.
