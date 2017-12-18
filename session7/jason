@@ -1,4 +1,4 @@
-IN PROGRESS
+In progress
 
 Problem 0
 In this problem, the limiting factor is the number of same size boxes. This is because any number of boxes, as long as they have different sizes, and be fitted in ascending size to 1 visible box.
@@ -36,11 +36,17 @@ Thus, from part 1), this is a tree.
 
 Problem 2
 Let n_i denote node i, and v_i denote the value of v_i
-DP[0][i] = The maximum independent set value if n_i is included in the independent set
-DP[1][i] = The maximum independent set value if n_i is NOT included in the independent set
+DP[0][i] = The maximum independent set value if n_i is NOT included in the independent set
+DP[1][i] = The maximum independent set value if n_i is included in the independent set
 Then the answer of this problem is max(DP[0][root], DP[1][root])
 DP[0][i] = sum(max(DP[0][n_j], DP[1][n_j])), where n_j = every neighbor of n_i
-DP[1][i] = sum(max(DP[0][n_j])), where n_j = every neighbor of n_i
+DP[1][i] = sum(max(DP[0][n_j])) + v_i, where n_j = every neighbor of n_i
+
+When looking at a tree, there are two cases:
+1) The max independent set contains the root
+In this case, the max independent set can be found by adding the max independent sets of each of the grandchildren of the root, as well as the root itself.
+2) The max independent set does not contain the root
+In this case, the max independent set can be found by adding the max independent sets of each of the children of the root
 
 Problem 3
 at first glance, DP from city N?
