@@ -203,6 +203,27 @@ OUTPUT2)
 
 2
 
+INPUT3)
+
+8
+
+1 2 3 4 5 6 7 8
+
+OUTPUT3)
+
+1
+
+INPUT 4)
+
+10
+
+86 89 89 86 86 89 86 86 89 89
+
+OUTPUT 4)
+
+5
+
+
 
 ## Problem 1)
 When is a graph a tree? For each of the following conditions, write either yes or no. If yes, prove it. If no, give a counter example.
