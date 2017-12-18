@@ -3,7 +3,8 @@
   - Sort the boxes from smallest to biggest.
   - starting from the smallest box i, find max of consecutive equal size box.
   n
-  - go through the array and use dictionary to count number of boxes in each size and return max.
+  - go through the array and use dictionary to count number of boxes and store box size as key and number of equal box as value.
+    Return max in values().
   
 1. 
 -It has no cycles and has N nodes and N - 1 edges.
@@ -34,8 +35,8 @@
 - Dp
   DP[i][0] = maximum sum possible starting from node i including node i.
   DP[i][1] = maximum sum possible starting from node i not including node i.
-  DP[i][0] = (sum(DP[j][1]) for all i's children nodes j
-  DP[i][1] = (sum(DP[j][0] + i.value) for all i's children nodes j
+  DP[i][0] = (sum(DP[j][1] + i.val) for all i's children nodes j
+  DP[i][1] = (sum(DP[j][0]) for all i's children nodes j
   return max(DP[root][0], DP[root][1])
   
 3. 
