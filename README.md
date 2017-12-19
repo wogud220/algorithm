@@ -317,3 +317,14 @@ OUTPUT)
 
 HINT) sort and binary search.
 CHALLENGE) what if D(x, y) = { y - x if | x - y | > 1 else 0} ? what if D(x, y) = y - x simply?
+
+## ANSWERS TO PSET 7.
+Problem 0: https://www.evernote.com/l/AtaApK-CKJ1CpJVpTXcSB7iRawAxRpQPbJU
+
+Problem 1: https://www.evernote.com/l/Atbzx_WrKN1Ewr_1eVeabqPYk0OWerxPpOk
+
+Problem 2: https://www.evernote.com/l/AtZmUkFbL3ZBu6Vq4ZqRwm-So6r3usOxq1c
+
+Problem 3: https://www.evernote.com/l/AtYHoUJjKyhK8qZYX02yKIIZdMCk--kKMHg
+
+Problem 4: https://www.evernote.com/l/AtamJ5R3ek5D8aWNcVm6ES7mJwHSmbS6Ngk
