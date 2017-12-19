@@ -226,7 +226,7 @@ OUTPUT 4)
 
 
 ## Problem 1)
-When is a graph a tree? For each of the following conditions, write either yes or no. If yes, prove it. If no, give a counter example.
+A tree by definition means an undirected graph s.t. any two vertices are connected by exactly one path. For each of the following conditions, prove the given graphs are trees. If yes, prove it. If no, give a counter example.
 
 1) It has no cycles and has N nodes and N - 1 edges.
 2) It has N nodes and N - 1 edges and all the nodes are connected. i.e. you can get from node i to node j for any pair (i, j)
