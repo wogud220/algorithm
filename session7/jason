@@ -1,9 +1,13 @@
-IN PROGRESS
+In progress
 
 Problem 0
-Sort
-Binsearch for predicate: Can you make at most X boxes be visible?
-NNNYYY
+In this problem, the limiting factor is the number of same size boxes. This is because any number of boxes, as long as they have different sizes, and be fitted in ascending size to 1 visible box.
+There are two natural ways to do this:
+1) O(nlogn) time, O(1) extra space.
+Sort in ascending size, then do a linear search, keeping track of the maximum number of equal-sized boxes
+2) O(n) time, O(n) extra space.
+Use a hash to map every box size to their counts, while keeping a global maximum variable.
+The number of maximum number of equal-sized boxes is the minimum number of visible boxes.
 
 Problem 1
 Definition of tree: A graph of nodes and edges without a cycle.
@@ -31,10 +35,39 @@ However, adding another edge creates a cycle somewhere in the graph.
 Thus, from part 1), this is a tree.
 
 Problem 2
+Let n_i denote node i, and v_i denote the value of v_i
+DP[0][i] = The maximum independent set value if n_i is NOT included in the independent set
+DP[1][i] = The maximum independent set value if n_i is included in the independent set
+Then the answer of this problem is max(DP[0][root], DP[1][root])
+DP[0][i] = sum(max(DP[0][n_j], DP[1][n_j])), where n_j = every neighbor of n_i
+DP[1][i] = sum(max(DP[0][n_j])) + v_i, where n_j = every neighbor of n_i
+
+When looking at a tree, there are two cases:
+1) The max independent set contains the root
+In this case, the max independent set can be found by adding the max independent sets of each of the grandchildren of the root, as well as the root itself.
+2) The max independent set does not contain the root
+In this case, the max independent set can be found by adding the max independent sets of each of the children of the root
 
 Problem 3
 at first glance, DP from city N?
+M[i, j] = the maximum number of cities that you can go sightseeing in if you have reached city i by time j.
+Answer is M[N, T_f]
+M[i, j] = max(
+M[i-1, j - D_i],
+M[i-1, j - D_i - T_f] + 1
+)
+
+F[i, j] = the earliest time you can reach city i after having gone sightseeing at exactly j different cities.
+Answer is max(0, j*) where j* = all j such that F[N, j] <= T_f
+F[i, j] = min(
+F[i-1, j] + D_i,
+F[i-1, j-1] + T_s + D_i
+)
 
 Problem 4
+Sort. Although sorting changes the order of i and j, since D(x,y) is either 0 or absolute value of x-y, the order of the difference does not matter.
+
+
+
 
 
