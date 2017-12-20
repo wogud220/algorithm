@@ -1,4 +1,4 @@
-# COMP 382 training
+# Fall 2017 Training
 
 This repoistory serves as a place for consolidating 1) problems we went over in each session 2) our analysis for each problem and 3) each person's implementations for some or all of the problems.
 
